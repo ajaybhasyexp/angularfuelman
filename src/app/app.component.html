@@ -1,20 +1,151 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="wrapper">
+  <!-- navigation -->
+  <nav-menu></nav-menu>
+  <!-- navigation -->
 
+  <div id="page-wrapper" class="gray-bg">
+    <div class="row border-bottom">
+      <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+          <a class="navbar-minimalize minimalize-styl-2 btn btn-primary"><i class="fa fa-bars"></i> </a>
+          <form role="search" class="navbar-form-custom" action="search_results.html">
+            <div class="form-group">
+              <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+            </div>
+          </form>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <li>
+            <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+            </a>
+            <ul class="dropdown-menu dropdown-messages">
+              <li>
+                <div class="dropdown-messages-box">
+                  <a href="profile.html" class="pull-left">
+                    <img alt="image" class="img-circle" src="./assets/template/img/a7.jpg">
+                  </a>
+                  <div class="media-body">
+                    <small class="pull-right">46h ago</small>
+                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                  </div>
+                </div>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <div class="dropdown-messages-box">
+                  <a href="profile.html" class="pull-left">
+                    <img alt="image" class="img-circle" src="./assets/template/img/a4.jpg">
+                  </a>
+                  <div class="media-body ">
+                    <small class="pull-right text-navy">5h ago</small>
+                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                  </div>
+                </div>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <div class="dropdown-messages-box">
+                  <a href="profile.html" class="pull-left">
+                    <img alt="image" class="img-circle" src="././assets/template/img/profile.jpg">
+                  </a>
+                  <div class="media-body ">
+                    <small class="pull-right">23h ago</small>
+                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                  </div>
+                </div>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <div class="text-center link-block">
+                  <a href="mailbox.html">
+                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts">
+              <li>
+                <a href="mailbox.html">
+                  <div>
+                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="profile.html">
+                  <div>
+                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                    <span class="pull-right text-muted small">12 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="grid_options.html">
+                  <div>
+                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                    <span class="pull-right text-muted small">4 minutes ago</span>
+                  </div>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <div class="text-center link-block">
+                  <a href="notifications.html">
+                    <strong>See All Alerts</strong>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="login.html">
+              <i class="fa fa-sign-out"></i> Log out
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+      <div class="col-sm-4">
+        <!--<h2>This is main title</h2>-->
+      </div>
+    </div>
+    <div class="wrapper wrapper-content">
+
+      <!-- partial dynamic views -->
+      <router-outlet>
+        <!--<filemanager></filemanager>-->
+        <!--<calendarcontrol></calendarcontrol>-->
+        <!--<schedulercontrol></schedulercontrol>-->
+      </router-outlet>
+      <!-- partial dynamic views ends -->
+
+    </div>
+    <div class="footer">
+      <div class="pull-right">
+        10GB of <strong>250GB</strong> Free.
+      </div>
+      <div>
+        <strong>Copyright</strong> Example Company &copy; 2014-2017
+      </div>
+    </div>
+  </div>
+
+</div>
