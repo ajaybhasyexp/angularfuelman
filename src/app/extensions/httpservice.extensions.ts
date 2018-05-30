@@ -19,10 +19,12 @@ export class HttpService extends Http {
       if (!options) {
         options = { headers: new Headers() };
       }
+      //if (options.headers) options.headers.set('Authorization', 'Bearer ${this.token}');
       if (options.headers) options.headers.set('Authorization', 'Bearer ${this.token}');
     }
-    else {
-      url.headers.set('Authorization', `Bearer ${this.token}`);
+    else {      
+      //url.headers.set('Authorization', `Bearer ${this.token}`);
+      url.headers.set('Authorization', 'frwerwetertertger');
     }
 
     return super.request(url, options).catch(this.catchautherror(this));

@@ -9,10 +9,10 @@ export class BrokerService {
   }
 
 
-  addNozzle(name: string, fuelId: number) {
-    return this.http.get(`api/default`)
+  addNozzle(nozzle: any) {
+    return this.http.post(`http://localhost:53554/nozzle/post`, nozzle)
       .map((res) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+      //.catch((error: any) => Observable.throw(error.json().error || 'Server error'))
   }
 
 }
