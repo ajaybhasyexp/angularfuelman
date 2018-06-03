@@ -29,7 +29,7 @@ export class ApiService {
 
     const request = new Request(requestOptions);
     return this.http.request(request)
-      .map((res: Response) => res.json().result)
+      .map((res: Response) => res.json())
       .catch((res: Response) => this.onError(res));
   }
 

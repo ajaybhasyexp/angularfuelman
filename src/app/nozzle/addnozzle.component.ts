@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrokerService } from '../services/broker.service';
 import { ApiService } from '../services/api.service';
 import { Nozzle } from '../models/nozzle';
+import { Constants } from '../constants';
 
 @Component({
   selector: 'addnozzle',
@@ -11,10 +12,9 @@ import { Nozzle } from '../models/nozzle';
 
 export class NozzleComponent implements OnInit {
 
-  result: Nozzle[] = [];
-
+  nozzles: Array<INozzle> = new Array<INozzle>();
+  nozzle = new Nozzle();
   constructor(private service: ApiService) {
-    //this.hserv.GetHomeMessage().subscribe(response => this.result = response);
   }
 
   ngOnInit(): void {
@@ -22,19 +22,18 @@ export class NozzleComponent implements OnInit {
   }
 
   getNozzles(): any {
-    this.service.get("nozzle").subscribe(resp => {
-      this.bindNozzles(resp);
+    this.service.get(Constants.getNozzle).subscribe(resp => {
+      this.bindNozzles(resp.result);
     });
   }
 
-  bindNozzles(data: Nozzle[]): void {
-    console.log(data);
-    this.result = data;
+  bindNozzles(data: Array<Nozzle>): void {
+    this.nozzles = data;
   }
 
-  // saveNozzleDetails() {
-  //   this.service.post("http://localhost:53554/nozzle", this.nozzle).subscribe(resp => {
-  //     this.result = resp;
-  //   });
-  // }
+  saveNozzleDetails() {
+    this.service.post(Constants.addNozzle, this.nozzle).subscribe(resp => {
+      this.getNozzles();
+    });
+  }
 }
