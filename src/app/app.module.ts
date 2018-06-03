@@ -12,6 +12,7 @@ import { BrokerService } from './services/broker.service';
 import { HttpService } from './extensions/httpservice.extensions';
 import { Http, Request, RequestOptions, XHRBackend, RequestOptionsArgs, Response, Headers } from "@angular/http";
 import { FuelComponent } from './fuel/fuel.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FuelComponent } from './fuel/fuel.component';
       },
       deps: [XHRBackend, RequestOptions]
     },
-    BrokerService
+    BrokerService,
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

@@ -10,7 +10,7 @@ export class BrokerService {
 
 
   addNozzle(nozzle: any) {
-    return this.http.post(`http://localhost:53554/nozzle/post`, nozzle)
+    return this.http.post("http://localhost:53554/nozzle", nozzle)
       .map((res) => res.json())
       //.catch((error: any) => Observable.throw(error.json().error || 'Server error'))
   }
